@@ -1,0 +1,51 @@
+html{
+	font-size: calc(100vw * 5 / 36);
+	font-family: Arial,Verdana,Sans-serif;
+	/*word-wrap 属性允许长单词或 URL 地址换行到下一行*/
+	word-wrap: break-word;
+}
+body{
+	margin:0;
+}
+p{
+	margin:0;
+}
+ol,ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+blockquote{
+	margin:0;
+}
+address{
+	font-style: normal;
+}
+dl,dt,dd{
+	margin:0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+a{
+	text-decoration: none;
+}
+em{
+	font-style: normal;
+}
+img{
+	border:0;
+}
+form,input,button{
+	/* 
+		外边线
+			特性1：书写方式和 border 相同
+			特性2：在文档流布局中不占位置
+	*/
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+textarea{
+	resize: none;
+}

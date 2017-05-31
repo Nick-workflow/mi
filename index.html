@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>仿小米商城-首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<link rel="shortcut icon" type="text/css" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript" src="lib/swiper.min.js"></script>
+		<script type="text/javascript" src="lib/zepto.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="page-index">
+				<div class="index-header">
+					<div class="logo">
+						<img src="img/logo_header.png" alt="">
+					</div>
+					<div class="search_bar">
+						<a href="javascript:;">
+							<span class="text">搜索商品名称</span>
+						</a>
+					</div>
+					<div class="login">
+						<p class="text">登录</p>
+					</div>
+				</div>
+				<script type="text/javascript">
+					window.onscroll = function () {
+                        var w = window.innerWidth || document.documentElement.clientWidth;
+						var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+                        var head = document.querySelector(".index-header");
+                        var minW = w / 2.07;
+                        var maxW = w / 1.38;
+                        console.log(scrollHeight)
+						if(scrollHeight >= minW && scrollHeight <= maxW){
+						    head.style.backgroundColor = "rgba(229, 131, 53,"+ (scrollHeight - minW)/(maxW - minW) +")";
+						}else if(scrollHeight < minW){
+                            head.style.backgroundColor = "rgba(229, 131, 53, 0)";
+						}else if(scrollHeight > maxW){
+                            head.style.backgroundColor = "rgba(229, 131, 53, 1)";
+						}
+                    }
+				</script>
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/banner1.webp" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/banner2.webp" alt="">
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<script type="text/javascript">
+					Zepto(function ($) {
+						var banner = new Swiper(".swiper-container",{
+						    direction: "horizontal",
+							autoplay: 3000,
+                            //当点击切换之后，再次启动自动轮播
+                            autoplayDisableOnInteraction : false,
+                            loop: true,
+							pagination: ".swiper-pagination",
+							paginationClickable: true
+						});
+                    });
+				</script>
+
+				<div class="content">
+					<section>
+						<a href="javascipt:;">
+							<div class="news">
+								<img src="img/news.png" alt="">
+								<p>明早10点见，小米商城周五抢购攻略</p>
+							</div>
+						</a>
+					</section>
+					<section>
+						<div class="firstFloor">
+							<div class="img">
+								<a href="javascript:;">
+									<img src="img/firstFloor1.webp" alt="">
+								</a>
+							</div>
+							<div class="img">
+								<a href="javascript:;">
+									<img src="img/firstFloor2.webp" alt="">
+								</a>
+							</div>
+							<div class="img">
+								<a href="javascript:;">
+									<img src="img/firstFloor3.webp" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="secondFloor">
+							<a href="javascipt:;">
+								<img src="img/secondFloor1.webp" alt="">
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="thirdFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/thirdFloor1.webp" alt="">
+									<div class="tag">
+										<img src="img/thirdFloor_tag.webp" alt="">
+									</div>
+									<div class="info">
+										<div class="name">小米手环2</div>
+										<div class="brief">OLED 显示屏，触摸操作</div>
+										<div class="price">149</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/thirdFloor2.webp" alt="">
+									<div class="info">
+										<div class="name">小米5 64GB版</div>
+										<div class="brief">十余项黑科技，很轻狠快</div>
+										<div class="price">1799</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="thirdFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/thirdFloor3.webp" alt="">
+									<div class="info">
+										<div class="name">小米5s Plus 64GB版</div>
+										<div class="brief">5.7"大屏双摄手机</div>
+										<div class="price">2299</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/thirdFloor4.webp" alt="">
+									<div class="info">
+										<div class="name">小米5s 64GB版</div>
+										<div class="brief">“暗夜之眼”超感光相机</div>
+										<div class="price">1999</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="fourthFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/fourthFloor1.webp" alt="">
+									<div class="tag">
+										<img src="img/thirdFloor_tag.webp" alt="">
+									</div>
+									<div class="info">
+										<div class="name">小米路由器3</div>
+										<div class="brief">全向高增益4天线</div>
+										<div class="price">149</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/fourthFloor2.webp" alt="">
+									<div class="info">
+										<div class="name">小米空气净化器 2</div>
+										<div class="brief">10分钟，房间空气焕然一新</div>
+										<div class="price">699</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="fifthFloor">
+							<a href="javascipt:;">
+								<img src="img/fifthFloor1.webp" alt="">
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="sixthFloor">
+							<a href="javascipt:;">
+								<img src="img/sixthFloor1.webp" alt="">
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="seventhFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/seventhFloor1.webp" alt="">
+									<div class="tag">
+										<img src="img/seventhFloor_tag.webp" alt="">
+									</div>
+									<div class="info">
+										<div class="name">简约头层小牛皮钱包</div>
+										<div class="brief">轻松揣进口袋，便于携带</div>
+										<div class="price">129</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/seventhFloor2.webp" alt="">
+									<div class="info">
+										<div class="name">小米便携鼠标</div>
+										<div class="brief">轻薄便携，含电池仅重77.5g</div>
+										<div class="price">99</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="seventhFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/seventhFloor3.webp" alt="">
+									<div class="info">
+										<div class="name">最生活毛巾 青春系列</div>
+										<div class="brief">1.6秒强吸水，杀菌无刺激</div>
+										<div class="price">19.9</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/seventhFloor4.webp" alt="">
+									<div class="info">
+										<div class="name"> 车载必备套装</div>
+										<div class="brief">全套装备，净化空气 </div>
+										<div class="price">557.9</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="seventhFloor">
+							<a href="javascript:;">
+								<div class="img1">
+									<img src="img/seventhFloor5.webp" alt="">
+									<div class="info">
+										<div class="name">WiFi放大器 2</div>
+										<div class="brief">速率翻倍，覆盖无忧</div>
+										<div class="price">49</div>
+									</div>
+								</div>
+							</a>
+							<a href="javascript:;">
+								<div class="img2">
+									<img src="img/seventhFloor6.webp" alt="">
+									<div class="info">
+										<div class="name">小米移动电源2</div>
+										<div class="brief">便携轻便，出行无忧</div>
+										<div class="price">149</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="eighthFloor">
+							<a href="javascipt:;">
+								更多新品 >
+							</a>
+						</div>
+					</section>
+					<!--重复楼层-->
+					<section>
+						<div class="fifthFloor">
+							<a href="javascipt:;">
+								<img src="img/fifthFloor2.webp" alt="">
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="sixthFloor">
+							<a href="javascipt:;">
+								<img src="img/sixthFloor2.webp" alt="">
+							</a>
+						</div>
+					</section>
+					<!--重复楼层 end-->
+					<section>
+						<div class="ninethFloor">
+							<a href="javascript:;">
+								<div class="img">
+									<img src="img/ninethFloor1.webp" alt="">
+								</div>
+								<div class="info">
+									<div class="name">米家签字笔</div>
+									<div class="briefwarp">日本进口油墨 9.5mm 舒适握感 120° 轻旋出笔</div>
+									<div class="price mt32">14.9</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="ninethFloor">
+							<a href="javascript:;">
+								<div class="info">
+									<div class="name">米家LED随身灯 增强版</div>
+									<div class="briefwarp">小巧轻便 5级亮度调节</div>
+									<div class="price mt32">19.9</div>
+								</div>
+								<div class="img">
+									<img src="img/ninethFloor2.webp" alt="">
+								</div>
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="ninethFloor">
+							<a href="javascript:;">
+								<div class="img">
+									<img src="img/ninethFloor3.webp" alt="">
+								</div>
+								<div class="info">
+									<div class="name">米兔智能故事机 </div>
+									<div class="briefwarp">海量好故事，智能语音交互，材质安全耐用</div>
+									<div class="price mt32">199</div>
+								</div>
+							</a>
+						</div>
+					</section>
+					<!--重复楼层-->
+					<section>
+						<div class="eighthFloor">
+							<a href="javascipt:;">
+								更多米家智能产品 >
+							</a>
+						</div>
+					</section>
+					<!--重复楼层 end-->
+					<section>
+						<div class="tenthFloor">
+							<div class="left">
+								<a href="javascript:;">
+									<img src="img/tenthFloor1.webp" alt="">
+								</a>
+							</div>
+							<div class="right">
+								<a href="javascript:;">
+									<img src="img/tenthFloor2.webp" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="tenthFloor">
+							<div class="left">
+								<a href="javascript:;">
+									<img src="img/tenthFloor3.webp" alt="">
+								</a>
+							</div>
+							<div class="right">
+								<a href="javascript:;">
+									<img src="img/tenthFloor4.webp" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="tenthFloor">
+							<div class="left">
+								<a href="javascript:;">
+									<img src="img/tenthFloor5.webp" alt="">
+								</a>
+							</div>
+							<div class="right">
+								<a href="javascript:;">
+									<img src="img/tenthFloor6.webp" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div class="eleventhFloor">
+							<a href="javascript:;">
+								<img src="img/eleventhFloor.jpg" alt="">
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<div class="footer">
+					<ul>
+						<li>
+							<a class="on" href="index.html">
+								<div class="bot-nav nav1"></div>
+								<p>首页</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="bot-nav nav2"></div>
+								<p>分类</p>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="bot-nav nav3"></div>
+								<p>购物车</p>
+							</a>
+						</li>
+						<li>
+							<a href="personal.html">
+								<div class="bot-nav nav4"></div>
+								<p>我的</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

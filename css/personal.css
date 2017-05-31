@@ -1,0 +1,202 @@
+html,body{
+     height: 100%;
+ }
+#wrapper{
+    position: relative;
+    height: 100%;
+}
+.personal{
+    background: #f5f5f5;
+    min-height: 100%;
+    padding-bottom: 1rem;
+}
+.personal .head{
+    background: #f37d0f url("../img/personal-head1.png") center 0 no-repeat;
+    background-size: auto 100%;
+    padding: .32rem 0;
+}
+.personal .head .user{
+    display: flex;
+    align-items: center;
+}
+.personal .head .user .personalImg{
+    margin: 0 .16rem 0 .32rem;
+    width: .96rem;
+    min-width: .96rem;
+    height: .96rem;
+    background: url("../img/personal-head2.png") no-repeat;
+    background-size: 100% auto;
+}
+.personal .head .user .personalLogin{
+    color: #fff;
+    font-size: .24rem;
+}
+
+.order{
+    background: #fff;
+}
+.order>a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .56rem;
+    height: .8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    position: relative;
+    color: rgba(0, 0, 0, .54);
+}
+.order>a span{
+    font-size: .28rem;
+    padding: 0 0 0 .32rem;
+    color: rgba(0,0,0,.87);
+}
+.order>a .more{
+    font-size: .24rem;
+}
+.order>a .more:after{
+    content: "";
+    position: absolute;
+    right: .32rem;
+    top: 50%;
+    width: .2rem;
+    height: .2rem;
+    border-left: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: translate3d(0,-50%,0) rotateZ(135deg);
+}
+.order ul.nav{
+    display: flex;
+    justify-content: space-around;
+}
+.order ul.nav li{
+    text-align: center;
+    font-size: .24rem;
+    color: rgba(0,0,0,.87);
+}
+.order ul.nav li a{
+    padding: .4rem 0;
+    position: relative;
+    display: block;
+    color: #333;;
+}
+.order ul.nav li a .icon{
+    width: .48rem;
+    height: .48rem;
+    background: url("../img/personal-dfk.png") no-repeat center 0;
+    background-size: 100% auto;
+    margin: 0 auto .16rem;
+}
+.order ul.nav li.thx a .icon{
+    background-image: url("../img/personal-thx.png");
+}
+
+.items{
+    margin-top: .16rem;
+}
+.items ul{
+    background: #fff;
+    margin-bottom: .16rem;
+}
+.items ul li{
+    position: relative;
+    color: rgba(0,0,0,.54);
+    background: no-repeat .32rem center;
+    background-size: .48rem auto;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.items ul li:last-child{
+    border-bottom-color: #fff;
+}
+.items ul li.wallet{
+    background-image: url("../img/personal-wallet.png");
+}
+.items ul li.service{
+    background-image: url("../img/personal-service.png");
+}
+.items ul li.mihome{
+    background-image: url("../img/personal-mihome.png");
+}
+.items ul li.setting{
+    background-image: url("../img/personal-setting.png");
+}
+.items ul li:after{
+    content: "";
+    position: absolute;
+    right: .32rem;
+    top: 50%;
+    width: .2rem;
+    height: .2rem;
+    border-left: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: translate3d(0,-50%,0) rotateZ(135deg);
+}
+.items ul li>a{
+    padding-right: .56rem;
+    padding-left: 1.12rem;
+    height: 1.04rem;
+    display: flex;
+    align-items: center;
+}
+.items ul li>a span{
+    font-size: .28rem;
+    color: rgba(0,0,0,.87);
+}
+.items ul li.mihome:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 3px;
+    background: #fff;
+    width: 1.12rem;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    z-index: 10;
+    border-top: 1px solid #e0e0e0;
+}
+.footer ul{
+    display: flex;
+}
+.footer li{
+    width: 100%;
+    text-align: center;
+}
+.footer li>a{
+    display: block;
+    padding: .12rem 0;
+}
+.footer .bot-nav{
+    width: .4rem;
+    height: .4rem;
+    background: url("../img/bot-nav.png") no-repeat;
+    background-size: .4rem 3.2rem;
+    overflow: hidden;
+    margin: 0 auto .08rem;
+}
+.footer .bot-nav.nav1{
+    background-position: 0 -2.8rem;
+}
+.footer .bot-nav.nav2{
+    background-position: 0 -.4rem;
+}
+.footer .bot-nav.nav3{
+    background-position: 0 -1.2rem;
+}
+.footer .bot-nav.nav4{
+    background-position: 0 -1.6rem;
+}
+.footer p{
+    color: #999;
+    font-size: .22rem;
+    line-height: .8;
+}
+.footer a.on p{
+    color: #FF5722;
+}
